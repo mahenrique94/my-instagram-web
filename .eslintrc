@@ -72,7 +72,7 @@
           "/^@img/",
           "/^@fonts/",
           "/^@icons/",
-          "/^@js/",
+          "/^@ts/",
           "/^@css/"
         ],
         "newlinesBetween": "always"
@@ -131,7 +131,7 @@
     "no-empty-function": "error",
     "no-eq-null": "error",
     "no-eval": "error",
-    "no-extend-native": "off",
+    "no-extend-native": ["error", {"exceptions": ["Array"]}],
     "no-extra-bind": "error",
     "no-floating-decimal": "error",
     "no-implied-eval": "error",

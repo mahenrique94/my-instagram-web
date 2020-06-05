@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@config": ["./src/config/config"],
+      "@env": ["./src/environments"],
+      "@http": ["./src/config/http"],
+      "@i18n": ["./src/translate/i18n"],
+      "@mocks": ["./src/config/mocks"],
+      "@routes": ["./src/config/routes"],
+      "@/*": ["./src/*"],
+      "@cfg/*": ["./src/config/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@containers/*": ["./src/containers/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@css/*": ["./src/assets/css/*"],
+      "@env/*": ["./src/environments/*"],
+      "@features/*": ["./src/features/*"],
+      "@fonts/*": ["./src/assets/fonts/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@hoc/*": ["./src/hoc/*"],
+      "@icons/*": ["./src/assets/icons/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@img/*": ["./src/assets/img/*"],
+      "@ts/*": ["./src/assets/ts/*"],
+      "@profiles/*": ["./src/profiles/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
+  }
+}
