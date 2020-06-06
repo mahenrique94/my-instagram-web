@@ -1,5 +1,11 @@
 import React from 'react'
 
-const SignIn = () => <h1>SignIn</h1>
+import Public from '@containers/Public'
+
+const SignIn = () => (
+  <Public>
+    <h1>Ola</h1>
+  </Public>
+)
 
 export default SignIn

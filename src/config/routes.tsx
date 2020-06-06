@@ -4,12 +4,13 @@ import { Switch } from 'react-router'
 
 import { combineLinkedRoutes, combineRoutes } from '@utils/routes'
 
+import PrivateRoute from '@infrastructure/PrivateRoute'
+import PublicRoute from '@infrastructure/PublicRoute'
+
 import { routes as authenticationRoutes } from '@features/authentication/routes'
 
 import LoadingRoute from '@components/LoadingRoute'
 import NotFound from '@components/NotFound'
-import PrivateRoute from '@components/PrivateRoute'
-import PublicRoute from '@components/PublicRoute'
 
 import { history } from './history'
 
