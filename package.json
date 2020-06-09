@@ -58,6 +58,7 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
+    "lint-staged": "^10.2.9",
     "nock": "^12.0.3",
     "prettier": "^2.0.5",
     "react-app-rewire-alias": "^0.1.6",
@@ -72,6 +73,9 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^26.1.0",
     "typescript": "~3.7.2"
+  },
+  "engines": {
+    "node": "12.18.0"
   },
   "name": "my-instagram-web",
   "private": true,
