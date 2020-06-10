@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const A = styled(Link)`
+const A = styled.a`
   text-decoration: none;
 `
 
