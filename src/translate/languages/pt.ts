@@ -5,8 +5,16 @@ const messages = {
         author: 'Matheus',
         name: 'Instagram',
       },
+      descriptions: {
+        images: {
+          availableAppleStore: 'Baixar aplicativo na Apple Store',
+          availablePlayStore: 'Baixar aplicativo na Play Store',
+        },
+      },
       labels: {
+        getApp: 'Obtenha o aplicativo',
         of: 'do',
+        signUp: 'Cadastre-se',
       },
       links: {
         about: 'Sobre',
@@ -20,6 +28,9 @@ const messages = {
         press: 'Imprensa',
         privacity: 'Privacidade',
         terms: 'Termos',
+      },
+      questions: {
+        hasNoAccount: 'Não tem uma conta?',
       },
     },
   },

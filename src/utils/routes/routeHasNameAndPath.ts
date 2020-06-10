@@ -1,5 +1,5 @@
-import Route from '@interfaces/Route'
+import IRoute from '@interfaces/IRoute'
 
-const routeHasNameAndPath = (route: Route): boolean => !!route && !!route.name && !!route.path
+const routeHasNameAndPath = (route: IRoute): boolean => !!route && !!route.name && !!route.path
 
 export { routeHasNameAndPath }

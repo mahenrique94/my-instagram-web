@@ -7,6 +7,8 @@ interface Props {
   children: ReactNode
 }
 
-const Theme = ({ children }: Props) => <ThemeProvider theme={Themes.light}>{children}</ThemeProvider>
+const Theme = ({ children }: Props) => (
+  <ThemeProvider theme={Themes.light}>{children}</ThemeProvider>
+)
 
 export default Theme

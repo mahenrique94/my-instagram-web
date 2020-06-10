@@ -1,6 +1,6 @@
-import Route from '@interfaces/Route'
+import IRoute from '@interfaces/IRoute'
 
-const combineRoutes = (routesToCombine: Array<Route[]>): Route[] =>
+const combineRoutes = (routesToCombine: Array<IRoute[]>): IRoute[] =>
   routesToCombine.reduce((allRoutes, route) => allRoutes.concat(route), [])
 
 export { combineRoutes }

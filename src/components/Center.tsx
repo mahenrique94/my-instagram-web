@@ -7,10 +7,8 @@ interface Props {
   children: ReactNode
 }
 
-const Container = styled(Div)<Props>`
-  margin: 0 auto;
-  max-width: 935px;
-  padding: ${({ theme }) => theme.spacings.lgg} 0;
+const Center = styled(Div)<Props>`
+  text-align: center;
 `
 
-export default Container
+export default Center

@@ -1,9 +1,9 @@
-import Route from '@interfaces/Route'
+import IRoute from '@interfaces/IRoute'
 
 import { routeHasNameAndPath } from './routeHasNameAndPath'
 
-const combineLinkedRoutes = (routesToCombine: Route[]): any =>
-  routesToCombine.filter(routeHasNameAndPath).reduce((links: any, route: Route) => {
+const combineLinkedRoutes = (routesToCombine: IRoute[]): any =>
+  routesToCombine.filter(routeHasNameAndPath).reduce((links: any, route: IRoute) => {
     links[route.name] = route.path
     return links
   }, {})

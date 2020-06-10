@@ -82,8 +82,7 @@
   "version": "0.1.0",
   "scripts": {
     "build": "BROWSERSLIST_CONFIG='./.browserlistrc.prod' react-app-rewired build",
-    "code:check": "prettier --config ./.prettierrc --check './src/**/*.{css,ts,tsx}'",
-    "code:format": "prettier --config ./.prettierrc --write './src/**/*.{css,ts,tsx}'",
+    "code:format": "prettier --config ./.prettierrc --write",
     "ci": "npm run lint && npm run test",
     "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
     "csslint": "stylelint './src/**/*.css' --allow-empty-input --config=./.cssstylelintrc",

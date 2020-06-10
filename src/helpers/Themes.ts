@@ -1,14 +1,21 @@
 import { DefaultTheme } from 'styled-components'
 
+import Borders from './Borders'
 import Colors from './Colors'
 import Fonts from './Fonts'
 import Spacings from './Spacings'
 
 const light: DefaultTheme = {
+  borders: {
+    default: `${Borders.default} ${Colors.border}`,
+  },
   colors: {
     background: Colors.background,
+    border: Colors.border,
     primary: Colors.primary,
+    secondary: Colors.secondary,
     text: Colors.text,
+    textAlt: Colors.textAlt,
   },
   fonts: {
     lg: Fonts.lg,

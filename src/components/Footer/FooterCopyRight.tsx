@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 
 import { i18n } from '@i18n'
 
 import Span from '@elements/Span'
 
-const StyledFooterCopyRight = styled(Span)`
-  color: ${({ theme }) => theme.colors.text};
+interface Props {
+  children: ReactNode
+}
+
+const StyledFooterCopyRight = styled(Span)<Props>`
+  color: ${({ theme }) => theme.colors.textAlt};
   font-size: ${({ theme }) => theme.fonts.xss};
   font-weight: 600;
   text-transform: uppercase;

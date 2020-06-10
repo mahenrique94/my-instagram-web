@@ -10,7 +10,11 @@ interface Props {
   link: string
 }
 
-const StyledFooterListItem = styled(Li)`
+interface PropsStyled {
+  children: ReactNode
+}
+
+const StyledFooterListItem = styled(Li)<PropsStyled>`
   margin-right: ${({ theme }) => theme.spacings.xs};
   &:first-child {
     margin-right: 0;
@@ -19,7 +23,7 @@ const StyledFooterListItem = styled(Li)`
 
 const FooterListItem = ({ children, link }: Props) => (
   <StyledFooterListItem>
-    <FooterLink link={link}>{children}</FooterLink>
+    <FooterLink to={link}>{children}</FooterLink>
   </StyledFooterListItem>
 )
 

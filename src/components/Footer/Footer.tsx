@@ -1,15 +1,15 @@
 import React from 'react'
 
-import FooterEl from '@elements/Footer'
+import EFooter from '@elements/Footer'
 
 import FooterCopyRight from './FooterCopyRight'
 import FooterList from './FooterList'
 
 const Footer = () => (
-  <FooterEl>
+  <EFooter>
     <FooterList />
     <FooterCopyRight />
-  </FooterEl>
+  </EFooter>
 )
 
 export default Footer
