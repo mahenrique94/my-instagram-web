@@ -6,11 +6,11 @@ import Spacings from '@helpers/Spacings'
 import Div from '@elements/Div'
 
 interface Props {
-  bottom?: Spacings | number
+  bottom?: Spacings | number | string
   children: ReactNode
-  left?: Spacings | number
-  right?: Spacings | number
-  top?: Spacings | number
+  left?: Spacings | number | string
+  right?: Spacings | number | string
+  top?: Spacings | number | string
 }
 
 const StyledMargin = styled(Div)<Props>`

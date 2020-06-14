@@ -3,7 +3,7 @@ import React, { FunctionComponent, ReactNode } from 'react'
 interface Props {
   children: FunctionComponent | ReactNode
   condition: boolean
-  el: any // TODO => Fix this any type
+  el?: any // TODO => Fix this any type
 }
 
 const If = ({ children, condition, el }: Props) => {
@@ -18,7 +18,7 @@ const If = ({ children, condition, el }: Props) => {
     return React.createElement(el)
   }
 
-  return el
+  return el || null
 }
 
 export default If

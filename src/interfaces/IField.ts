@@ -1,10 +1,11 @@
 interface IField {
-  max?: number
-  min?: number
+  max?: number | undefined
+  min?: number | undefined
   name: string
-  required?: boolean
-  type?: string
-  value?: string | number
+  placeholder?: string | undefined
+  required?: boolean | undefined
+  type?: string | undefined
+  value?: string | number | undefined
 }
 
 export default IField

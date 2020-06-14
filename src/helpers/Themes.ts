@@ -1,6 +1,7 @@
 import { DefaultTheme } from 'styled-components'
 
 import Borders from './Borders'
+import BordersRadius from './BordersRadius'
 import Colors from './Colors'
 import Fonts from './Fonts'
 import Spacings from './Spacings'
@@ -9,13 +10,27 @@ const light: DefaultTheme = {
   borders: {
     default: `${Borders.default} ${Colors.border}`,
   },
+  bordersRadius: {
+    lg: BordersRadius.lg,
+    lgg: BordersRadius.lgg,
+    md: BordersRadius.md,
+    mdd: BordersRadius.mdd,
+    sm: BordersRadius.sm,
+    smm: BordersRadius.smm,
+    xs: BordersRadius.xs,
+    xss: BordersRadius.xss,
+  },
   colors: {
     background: Colors.background,
     border: Colors.border,
+    error: Colors.error,
     primary: Colors.primary,
     secondary: Colors.secondary,
+    secondaryDisabled: Colors.secondaryDisabled,
+    success: Colors.success,
     text: Colors.text,
     textAlt: Colors.textAlt,
+    textLight: Colors.textLight,
   },
   fonts: {
     lg: Fonts.lg,

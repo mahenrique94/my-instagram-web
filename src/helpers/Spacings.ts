@@ -1,12 +1,12 @@
 enum Spacings {
-  xs = '8px',
-  xss = '12px',
-  sm = '16px',
-  smm = '20px',
-  md = '24px',
-  mdd = '28px',
-  lg = '32px',
-  lgg = '36px',
+  xs = '.5rem',
+  xss = '.75rem',
+  sm = '1rem',
+  smm = '1.25rem',
+  md = '1.5rem',
+  mdd = '1.75rem',
+  lg = '2rem',
+  lgg = '2.26rem',
 }
 
 export default Spacings
