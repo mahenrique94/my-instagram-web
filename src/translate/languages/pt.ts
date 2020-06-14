@@ -29,6 +29,11 @@ const messages = {
         privacity: 'Privacidade',
         terms: 'Termos',
       },
+      pages: {
+        titles: {
+          signIn: 'Entrar',
+        },
+      },
       questions: {
         hasNoAccount: 'Não tem uma conta?',
       },

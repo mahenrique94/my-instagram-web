@@ -69,6 +69,7 @@
           "/^@elements/",
           ["/^@features/", "/@profiles/"],
           "/^@components/",
+          "/^@interfaces/",
           "parent",
           "sibling",
           "/^../pages//",
