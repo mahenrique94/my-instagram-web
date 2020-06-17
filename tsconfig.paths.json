@@ -3,6 +3,7 @@
     "paths": {
       "@config": ["./src/config/config"],
       "@env": ["./src/environments"],
+      "@history": ["./src/config/history"],
       "@http": ["./src/config/http"],
       "@i18n": ["./src/translate/i18n"],
       "@mocks": ["./src/config/mocks"],

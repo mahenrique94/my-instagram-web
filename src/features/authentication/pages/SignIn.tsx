@@ -24,8 +24,23 @@ import { signIn } from '../fields'
 import availableAppleStore from '@img/available-apple-store.png'
 import availablePlayStore from '@img/available-play-store.png'
 
-const SignIn = () => {
-  const handleSubmit = (values: Record<string, any>) => console.log(values)
+interface Props {
+  isError: boolean
+  isLoading: boolean
+  requestSignIn: Function
+}
+
+const SignIn = ({ isError, isLoading, requestSignIn }: Props) => {
+  const handleSubmit = (values: Record<string, any>) => requestSignIn(values)
+
+  if (isError) {
+    return <h1>DEU RUIM</h1>
+  }
+
+  if (isLoading) {
+    return <h1>Carregando...</h1>
+  }
+
   return (
     <Html title={i18n.t('pages.titles.signIn')}>
       <Public>

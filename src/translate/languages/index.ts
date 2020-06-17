@@ -1,7 +1,9 @@
-import { messages as portugueseMessages } from './pt'
+import portugueseMessages from './pt-br.json'
 
 const messages = {
-  ...portugueseMessages,
+  pt: {
+    translations: portugueseMessages,
+  },
 }
 
 export { messages }

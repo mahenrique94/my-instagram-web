@@ -1,0 +1,7 @@
+enum ActionsTypes {
+  AUTH_REQUEST_SIGN_IN = 'AUTH_REQUEST_SIGN_IN',
+  AUTH_UPDATE_ERROR = 'AUTH_UPDATE_ERROR',
+  AUTH_UPDATE_STATUS = 'AUTH_UPDATE_STATUS',
+}
+
+export default ActionsTypes

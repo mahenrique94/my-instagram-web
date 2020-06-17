@@ -8,6 +8,7 @@ const signIn: IField[] = [
   { max: 255, name: 'user', placeholder: i18n.t('placeholders.user'), required: true },
   {
     max: 16,
+    min: 8,
     name: 'password',
     placeholder: i18n.t('placeholders.password'),
     required: true,
