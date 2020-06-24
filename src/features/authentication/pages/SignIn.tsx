@@ -1,3 +1,5 @@
+import HttpErrors from '@constants/HttpErrors'
+
 import React from 'react'
 
 import { i18n } from '@i18n'
@@ -9,6 +11,7 @@ import Public from '@containers/Public'
 import Box from '@components/Box'
 import Brand from '@components/Brand'
 import Center from '@components/Center'
+import Error from '@components/Error'
 import Form from '@components/Form'
 import Html from '@components/Html'
 import Image from '@components/Image'
@@ -19,26 +22,25 @@ import RowDivider from '@components/RowDivider'
 import Small from '@components/Small'
 import Text from '@components/Text'
 
-import { signIn } from '../fields'
+import { actions } from '../actions'
+import { fields } from '../fields'
 
 import availableAppleStore from '@img/available-apple-store.png'
 import availablePlayStore from '@img/available-play-store.png'
 
 interface Props {
+  error: string
   isError: boolean
   isLoading: boolean
-  requestSignIn: Function
+  requestSignIn: typeof actions.requestSignIn
 }
 
-const SignIn = ({ isError, isLoading, requestSignIn }: Props) => {
-  const handleSubmit = (values: Record<string, any>) => requestSignIn(values)
-
-  if (isError) {
-    return <h1>DEU RUIM</h1>
-  }
-
-  if (isLoading) {
-    return <h1>Carregando...</h1>
+const SignIn = ({ error, isError, isLoading, requestSignIn }: Props) => {
+  const handleSubmit = (values: Record<string, any>) => {
+    requestSignIn({
+      password: values.password,
+      user: values.user,
+    })
   }
 
   return (
@@ -52,13 +54,19 @@ const SignIn = ({ isError, isLoading, requestSignIn }: Props) => {
               </Margin>
               <Margin bottom={Spacings.smm}>
                 <Form
-                  fields={signIn}
+                  fields={[fields.user, fields.password]}
+                  isLoading={isLoading}
                   onSubmit={handleSubmit}
                   submitButtonLabel={i18n.t('buttons.signIn')}
                 />
               </Margin>
               <Margin bottom={Spacings.smm}>
                 <RowDivider>{i18n.t('labels.or')}</RowDivider>
+              </Margin>
+              <Margin bottom={Spacings.smm}>
+                {isError && error === HttpErrors.unauthorized && (
+                  <Error>{i18n.t('errors.api.unauthorized')}</Error>
+                )}
               </Margin>
               <Link to="">
                 <Small>{i18n.t('questions.forgetPassword')}</Small>

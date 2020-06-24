@@ -1,15 +1,16 @@
 import { handleActions } from '@utils/actions'
 
-import { actions } from '../actions'
+import ActionsTypes from '../ActionsTypes'
+import Store from '../interfaces/Store'
 import { store } from '../store'
 
 import { error } from './error'
 import { status } from './status'
 
-const reducers = handleActions(
+const reducers = handleActions<Store>(
   {
-    [actions.updateStatus as any]: status,
-    [actions.updateError as any]: error,
+    [ActionsTypes.AUTH_UPDATE_STATUS]: status,
+    [ActionsTypes.AUTH_UPDATE_ERROR]: error,
   },
   store,
 )

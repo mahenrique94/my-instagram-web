@@ -58,7 +58,7 @@
           ["/^@constants/", "/^./constants/"],
           "/^@env/",
           "module",
-          ["/^@cfg/", "/^@http/", "/^@i18n/", "/^@mocks/", "/^@routes/"],
+          ["/^@cfg/", "/^@http/", "/^@history/", "/^@i18n/", "/^@mocks/", "/^@routes/"],
           "/^@utils/",
           "/^@helpers/",
           "/^@themes/",

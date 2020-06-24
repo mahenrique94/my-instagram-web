@@ -1,3 +1,7 @@
-const getToken = (): string => 'abc-123'
+import { config } from '@config'
+
+import Cookie from 'js-cookie'
+
+const getToken = (): string | undefined => Cookie.get(config.app.storageKeys.auth)
 
 export { getToken }

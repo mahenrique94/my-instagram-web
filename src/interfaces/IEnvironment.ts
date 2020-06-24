@@ -5,6 +5,9 @@ interface IEnvironment {
   app: {
     environment: string | null
     namespace: string
+    storageKeys: {
+      auth: string
+    }
   }
 }
 

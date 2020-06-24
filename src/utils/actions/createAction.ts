@@ -1,8 +1,15 @@
 import { config } from '@config'
 
-import { createAction as reduxCreateAction } from 'redux-actions'
+import { ActionFunctionAny, createAction as reduxCreateAction } from 'redux-actions'
 
-const createAction = (name: string) =>
-  reduxCreateAction(`${config.app.namespace.toUpperCase()}_${name.toUpperCase()}`)
+const createAction = <T>(name: string, payloadCreator?: ActionFunctionAny<T>) => {
+  if (payloadCreator) {
+    return reduxCreateAction<T>(
+      `${config.app.namespace.toUpperCase()}_${name.toUpperCase()}`,
+      payloadCreator,
+    )
+  }
+  return reduxCreateAction<T>(`${config.app.namespace.toUpperCase()}_${name.toUpperCase()}`)
+}
 
 export { createAction }

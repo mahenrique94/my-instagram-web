@@ -9,6 +9,9 @@ const config = (): IEnvironment => ({
   app: {
     environment: null,
     namespace: 'my-instagram-web',
+    storageKeys: {
+      auth: 'token',
+    },
   },
 })
 

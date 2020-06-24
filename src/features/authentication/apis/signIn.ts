@@ -1,7 +1,7 @@
 import { http } from '@http'
 
 interface Payload {
-  user: string
+  username: string
   password: string
 }
 

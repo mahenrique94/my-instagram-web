@@ -12,6 +12,11 @@
       "availablePlayStore": "Baixar aplicativo na Play Store"
     }
   },
+  "errors": {
+    "api": {
+      "unauthorized": "Usuário ou senha inválidos. Confira-os"
+    }
+  },
   "form": {
     "validations": {
       "maxLength": "Campo excedeu a quantidade máxima de caracteres",

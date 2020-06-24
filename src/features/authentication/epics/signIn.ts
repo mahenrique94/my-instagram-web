@@ -1,23 +1,41 @@
 import PageStatus from '@constants/PageStatus'
 
-import { AxiosError } from 'axios'
 import { ofType } from 'redux-observable'
-import { of } from 'rxjs'
-import { catchError, debounceTime, mergeMap } from 'rxjs/operators'
+import { concat, Observable, of } from 'rxjs'
+import { debounceTime, mergeMap } from 'rxjs/operators'
+
+import { history } from '@history'
+import { routes } from '@routes'
 
 import { getAction } from '@utils/actions'
+import { setToken } from '@utils/authentication'
 
 import { actions } from '../actions'
 import ActionsTypes from '../ActionsTypes'
-import { services } from '../services'
+import { apis } from '../apis'
 
 const signIn = (action$: any) =>
   action$.pipe(
     ofType(getAction(ActionsTypes.AUTH_REQUEST_SIGN_IN)),
     debounceTime(1000),
-    mergeMap(({ payload }) => services.signIn(payload)),
-    catchError((error: AxiosError, caught) =>
-      of(actions.updateStatus(PageStatus.error), actions.updateError(error.response?.data)),
+    mergeMap(({ payload }) =>
+      concat(
+        of(actions.updateStatus(PageStatus.loading)),
+        new Observable(observer => {
+          apis.signIn(payload).subscribe(
+            res => {
+              observer.next(actions.updateStatus(PageStatus.rendered))
+              setToken(res.response.result)
+              history.push(routes.timeline)
+            },
+            error => {
+              observer.next(actions.updateStatus(PageStatus.error))
+              observer.next(actions.updateError(error.response.message))
+            },
+            () => observer.complete(),
+          )
+        }),
+      ),
     ),
   )
 

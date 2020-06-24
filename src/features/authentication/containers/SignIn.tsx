@@ -7,6 +7,7 @@ import { selectors } from '../selectors'
 import SignIn from '../pages/SignIn'
 
 const mapStateToProps = (state: State) => ({
+  error: selectors.getError(state),
   isError: selectors.getIsError(state),
   isLoading: selectors.getIsLoading(state),
 })

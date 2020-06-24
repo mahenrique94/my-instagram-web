@@ -1,10 +1,12 @@
 import produce from 'immer'
 import { handleActions as raHandeActions } from 'redux-actions'
 
-const handleActions = (actions: any, state: any) =>
+import { getAction } from './getAction'
+
+const handleActions = <T>(actions: { [name: string]: (...args: any[]) => any }, state: T) =>
   raHandeActions(
     Object.keys(actions).reduce((newActions: any, key: any) => {
-      newActions[key] = produce(actions[key])
+      newActions[getAction(key)] = produce(actions[key])
       return newActions
     }, {}),
     state,

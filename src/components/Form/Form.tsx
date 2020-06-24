@@ -1,3 +1,5 @@
+import Icons from '@constants/Icons'
+
 import React, { useEffect } from 'react'
 import { OnSubmit, useForm } from 'react-hook-form'
 
@@ -8,6 +10,8 @@ import Margin from '@components/Margin'
 
 import IField from '@interfaces/IField'
 
+import Icon from '../Icon'
+
 import FormButton from './FormButton'
 import FormError from './FormError'
 import FormField from './FormField'
@@ -15,11 +19,12 @@ import FormGroup from './FormGroup'
 
 interface Props {
   fields: IField[]
+  isLoading: boolean
   onSubmit: OnSubmit<Record<string, string | number>>
   submitButtonLabel: string
 }
 
-const Form = ({ fields, onSubmit, submitButtonLabel }: Props) => {
+const Form = ({ fields, isLoading, onSubmit, submitButtonLabel }: Props) => {
   const { errors, handleSubmit, register, triggerValidation } = useForm({
     mode: 'onChange',
   })
@@ -48,7 +53,9 @@ const Form = ({ fields, onSubmit, submitButtonLabel }: Props) => {
           </Margin>
         ))}
         <Margin top={Spacings.xss}>
-          <FormButton disabled={Object.values(errors).length > 0}>{submitButtonLabel}</FormButton>
+          <FormButton disabled={Object.values(errors).length > 0 || isLoading}>
+            {isLoading ? <Icon animation icon={Icons.Spinner} /> : submitButtonLabel}
+          </FormButton>
         </Margin>
       </form>
     </>

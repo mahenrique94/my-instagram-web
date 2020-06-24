@@ -2,11 +2,8 @@ import FormFieldTypes from '@constants/FormFieldTypes'
 
 import { i18n } from '@i18n'
 
-import IField from '@interfaces/IField'
-
-const signIn: IField[] = [
-  { max: 255, name: 'user', placeholder: i18n.t('placeholders.user'), required: true },
-  {
+const fields = {
+  password: {
     max: 16,
     min: 8,
     name: 'password',
@@ -14,6 +11,13 @@ const signIn: IField[] = [
     required: true,
     type: FormFieldTypes.password,
   },
-]
+  user: {
+    max: 255,
+    min: 5,
+    name: 'user',
+    placeholder: i18n.t('placeholders.user'),
+    required: true,
+  },
+}
 
-export { signIn }
+export { fields }
