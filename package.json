@@ -102,7 +102,7 @@
     "lint:fix": "tslint:fix && csslint:fix && sclint:fix",
     "sclint": "stylelint './src/**/*.tsx' --allow-empty-input --config=./.scstylelintrc",
     "sclint:fix": "stylelint './src/**/*.tsx' --allow-empty-input --config=./.scstylelintrc --fix",
-    "start": "BROWSERSLIST_CONFIG='./.browserlistrc.dev' react-app-rewired start",
+    "start": "BROWSERSLIST_CONFIG='./.browserlistrc.dev' REACT_APP_ENVIRONMENT=production react-app-rewired start",
     "test": "jest --config './jest.config.js' --maxWorkers=2 --passWithNoTests",
     "test:w": "jest --config './jest.config.js' --passWithNoTests --watchAll",
     "tslint": "eslint .",

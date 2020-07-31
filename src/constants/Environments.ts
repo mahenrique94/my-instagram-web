@@ -2,7 +2,7 @@ enum Environments {
   development = 'development',
   homolog = 'homolog',
   mock = 'mock',
-  prod = 'prod',
+  production = 'production',
   qa = 'qa',
 }
 
