@@ -13,8 +13,13 @@ interface Props {
 
 const StyledFooterList = styled(Ul)<Props>`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: ${({ theme }) => theme.spacings.xs};
+
+  @media (max-width: ${({ theme }) => theme.query.mobile}) {
+    justify-content: space-around;
+  }
 `
 
 const FooterList = () => (

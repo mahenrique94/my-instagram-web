@@ -37,6 +37,12 @@ declare module 'styled-components' {
       lg: string
       lgg: string
     }
+    query: {
+      desktop: string
+      mobile: string
+      screen: string
+      tablet: string
+    }
     spacings: {
       xs: string
       xss: string

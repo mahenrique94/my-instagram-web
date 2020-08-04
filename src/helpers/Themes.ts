@@ -4,6 +4,7 @@ import Borders from './Borders'
 import BordersRadius from './BordersRadius'
 import Colors from './Colors'
 import Fonts from './Fonts'
+import MediaQueries from './MediaQueries'
 import Spacings from './Spacings'
 
 const light: DefaultTheme = {
@@ -41,6 +42,12 @@ const light: DefaultTheme = {
     smm: Fonts.smm,
     xs: Fonts.xs,
     xss: Fonts.xss,
+  },
+  query: {
+    desktop: MediaQueries.desktop,
+    mobile: MediaQueries.mobile,
+    screen: MediaQueries.screen,
+    tablet: MediaQueries.tablet,
   },
   spacings: {
     lg: Spacings.lg,
