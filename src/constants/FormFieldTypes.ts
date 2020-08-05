@@ -1,6 +1,7 @@
 enum FormFieldTypes {
-  text = 'text',
   password = 'password',
+  search = 'search',
+  text = 'text',
 }
 
 export default FormFieldTypes

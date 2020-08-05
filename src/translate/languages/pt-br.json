@@ -43,6 +43,9 @@
     "privacity": "Privacidade",
     "terms": "Termos"
   },
+  "messages": {
+    "searchingFor": "Procurando por"
+  },
   "pages": {
     "titles": {
       "signIn": "Entrar"
@@ -50,6 +53,7 @@
   },
   "placeholders": {
     "password": "Senha",
+    "search": "Procurar",
     "user": "Email ou usuário"
   },
   "questions": {

@@ -8,13 +8,14 @@ import PrivateRoute from '@infrastructure/PrivateRoute'
 import PublicRoute from '@infrastructure/PublicRoute'
 
 import { routes as authenticationRoutes } from '@features/authentication/routes'
+import { routes as feedRoutes } from '@features/feed/routes'
 
 import LoadingRoute from '@components/LoadingRoute'
 import NotFound from '@components/NotFound'
 
 import { history } from './history'
 
-const allRoutes = [authenticationRoutes]
+const allRoutes = [authenticationRoutes, feedRoutes]
 
 const appRoutes = combineRoutes(allRoutes)
 const routes = combineLinkedRoutes(appRoutes)

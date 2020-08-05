@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import Div from '@elements/Div'
 
+import Brand from './Brand'
+
 interface Props {
   children: ReactNode
 }
@@ -13,6 +15,10 @@ const Box = styled(Div)<Props>`
   display: inline-block;
   min-width: 350px;
   padding: ${({ theme }) => `${theme.spacings.smm} ${theme.spacings.lgg}`};
+
+  ${Brand} {
+    margin: 0 auto;
+  }
 `
 
 export default Box

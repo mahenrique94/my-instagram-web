@@ -5,12 +5,11 @@ import { OnSubmit, useForm } from 'react-hook-form'
 
 import Spacings from '@helpers/Spacings'
 
-import If from '@components/If'
-import Margin from '@components/Margin'
-
 import IField from '@interfaces/IField'
 
 import Icon from '../Icon'
+import If from '../If'
+import Margin from '../Margin'
 
 import FormButton from './FormButton'
 import FormError from './FormError'
@@ -21,7 +20,7 @@ interface Props {
   fields: IField[]
   isLoading: boolean
   onSubmit: OnSubmit<Record<string, string | number>>
-  submitButtonLabel: string
+  submitButtonLabel?: string
 }
 
 const Form = ({ fields, isLoading, onSubmit, submitButtonLabel }: Props) => {
@@ -52,11 +51,13 @@ const Form = ({ fields, isLoading, onSubmit, submitButtonLabel }: Props) => {
             </FormGroup>
           </Margin>
         ))}
-        <Margin top={Spacings.xss}>
-          <FormButton disabled={Object.values(errors).length > 0 || isLoading}>
-            {isLoading ? <Icon animation icon={Icons.Spinner} /> : submitButtonLabel}
-          </FormButton>
-        </Margin>
+        <If condition={!!submitButtonLabel}>
+          <Margin top={Spacings.xss}>
+            <FormButton disabled={Object.values(errors).length > 0 || isLoading}>
+              {isLoading ? <Icon animation icon={Icons.Spinner} /> : submitButtonLabel}
+            </FormButton>
+          </Margin>
+        </If>
       </form>
     </>
   )
