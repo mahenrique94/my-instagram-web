@@ -1,4 +1,4 @@
-import portugueseMessages from './pt-br.json'
+import portugueseMessages from './messages/pt-br.json'
 
 const messages = {
   pt: {
